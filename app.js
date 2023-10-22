@@ -55,7 +55,7 @@ app.use("/redirect", redirectRouter);
 app.use("/api", apiRouter);
 
 app.use("/", createProxyMiddleware({
-  target: `http://${ip.address()}:3030`,
+  target: (process.env.NODE_ENV === "dev")? `http://${ip.address()}:3030`: "http://147.185.221.16:49851",
   changeOrigin: true,
   secure: false,
   xfwd: true,
