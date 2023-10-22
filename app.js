@@ -54,7 +54,7 @@ app.use(session({
 app.use("/redirect", redirectRouter);
 app.use("/api", apiRouter);
 
-app.use("/", createProxyMiddleware({
+/*app.use("/", createProxyMiddleware({
   target: (process.env.NODE_ENV === "dev")? `http://${ip.address()}:3030`: "http://147.185.221.16:49851",
   changeOrigin: true,
   secure: false,
@@ -68,9 +68,9 @@ app.use("/", createProxyMiddleware({
   headers: {
     "Connection": "keep-alive",
     "Content-Type": "text/xml;charset=UTF-8",
-    "Accept": "*/"
+    "Accept": "*"
   },
-}));
+}))*/;
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

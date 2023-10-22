@@ -3,7 +3,7 @@ import appendToCart from "../../../middlewares/Cart/appendToCart";
 const cartAppendCtl = async (req, res) => {
     try {
         //
-        const user_id = (process.env.NODE_ENV === "dev")? "test" : (req.session.user_id || null);
+        const user_id = (process.env.NODE_ENV === "dev")? "test" : (req.session.userId || null);
 
         // ログインしていない場合はエラー
         if (user_id === null) {
