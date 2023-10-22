@@ -3,8 +3,7 @@ import getOrderHistory from "../../../middlewares/Order/getOrderHistory";
 const orderHistoryCtl = async (req, res) => {
     try {
         //
-        // const user_id = req.session.user_id || null;
-        const user_id = "test";
+        const user_id = (process.env.NODE_ENV === "dev")? "test" : (req.session.user_id || null);
 
         var order_history = [];
         if (user_id !== null) {

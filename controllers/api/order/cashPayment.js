@@ -5,8 +5,7 @@ const cashPaymentOrderRegistCtl = async (req, res) => {
 
     try {
         //
-        // const user_id = req.session.user_id || null;
-        const user_id = "test";
+        const user_id = (process.env.NODE_ENV === "dev")? "test" : (req.session.user_id || null);
 
         if (user_id === null) {
             throw new Error("user_id is null");

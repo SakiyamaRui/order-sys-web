@@ -5,9 +5,9 @@ import jwtVerify from "../helpers/jwtVerify";
 import userSessionRegist from "../middlewares/userSessionRegist";
 var router = Router();
 
-const defaultRedirect = "http://localhost:3031/";
+const defaultRedirect = (process.env.NODE_ENV === "env") ? "http://localhost:3000" : "https://order.apori.jp/";
 
-const lineRedirectURI = "http://localhost:3031/redirect/line/openid";
+const lineRedirectURI = defaultRedirect + "redirect/line/openid";
 const lineRedirect = "https://access.line.me/oauth2/v2.1/authorize";
 const LINE_CLIENT_ID = "1660978812";
 

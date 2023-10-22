@@ -10,7 +10,14 @@ export default {
         charset: "utf8",
     },
     // 本番環境用
-    "product": {},
+    "product": {
+        host: "public.2aji3.tyo1.database-hosting.conoha.io",
+        port: 3306,
+        user: "2aji3_app",
+        password: "Rui-14sei",
+        database: "2aji3_order_sys",
+        charset: "utf8",
+    },
     "session": {
         "dev": {
             host: "localhost",
@@ -20,5 +27,13 @@ export default {
             database: "session_db",
             charset: "utf8",
         },
+        "product": {
+            host: "public.2aji3.tyo1.database-hosting.conoha.io",
+            port: 3306,
+            user: "2aji3_session",
+            password: "Rui-14sei",
+            database: "2aji3_session",
+            charset: "utf8",
+        }
     },
 }
