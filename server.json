@@ -1,0 +1,11 @@
+{
+    "name": "OrderSystem",
+    "script": "./bin/www",
+    "args": ["--interpreter", "./node_modules/@babel/node/bin/babel-node.js"],
+    "watch": true,
+    "autorestart": true,
+    "env": {
+        "NODE_ENV": "dev",
+        "PORT": 3031
+    }
+}
