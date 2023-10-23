@@ -2,7 +2,7 @@ import getKosenpayBalance from "../../../middlewares/KosenPay/balance";
 
 const getKosenpayBalanceCtl = async (req, res) => {
     try {
-        const user_id = (process.env.NODE_ENV === "dev")? "test" : (req.session.userId || null);
+        const user_id = (process.env.NODE_ENV === "dev")? "test" : (req.session.user_id || null);
 
         if (user_id == null) {
             throw new Error("ログインしていません。");
