@@ -5,7 +5,7 @@ import DB_CONFIG from "../../config/DB";
  * DBプールの作成
  */
 try {
-    const CONF = DB_CONFIG[process.env.NODE_ENV];
+    const CONF = DB_CONFIG[process.env.NODE_ENV || "product"];
 
     var dbPool = createPool({
         // DBホスト名

@@ -10,10 +10,9 @@ import ip from "ip";
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session')(session);
 
-import { createProxyMiddleware } from "http-proxy-middleware";
 // DBオプションの取得
 import dbOption from "./config/DB";
-const sessionDBOptions = dbOption.session[process.env.NODE_ENV || "dev"];
+const sessionDBOptions = dbOption.session[process.env.NODE_ENV || "product"];
 
 // MySQLセッションストア
 const sessionStore = new MySQLStore(sessionDBOptions);
