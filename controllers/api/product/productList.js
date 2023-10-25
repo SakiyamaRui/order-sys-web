@@ -5,7 +5,7 @@ const productListCtl = async (req, res) => {
         // 取得する販売日
         // const sale_date = req.body.sale_date;
 
-        const product_list  = await generateProductList("2023-10-25");
+        const product_list  = await generateProductList("2023-10-28");
 
         res.json({
             response: "OK",
