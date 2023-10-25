@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require( "body-parser");
 import ip from "ip";
+import { createProxyMiddleware } from "http-proxy-middleware";
 
 // セッション
 const session = require('express-session');
