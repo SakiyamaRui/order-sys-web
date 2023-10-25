@@ -53,8 +53,9 @@ app.use(session({
 app.use("/redirect", redirectRouter);
 app.use("/api", apiRouter);
 
-/*app.use("/", createProxyMiddleware({
-  target: (process.env.NODE_ENV === "dev")? `http://${ip.address()}:3030`: "http://147.185.221.16:49851",
+app.use("/", createProxyMiddleware({
+  // target: (process.env.NODE_ENV === "dev")? `http://${ip.address()}:3030`: "https://register.apori.jp/",
+  target: `http://${ip.address()}:3030`,
   changeOrigin: true,
   secure: false,
   xfwd: true,
@@ -69,7 +70,7 @@ app.use("/api", apiRouter);
     "Content-Type": "text/xml;charset=UTF-8",
     "Accept": "*"
   },
-}))*/;
+}));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
